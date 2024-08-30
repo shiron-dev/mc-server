@@ -9,7 +9,6 @@ ENV LANG ja_JP.UTF-8
 ENV PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/41/downloads/paper-1.21.1-52.jar"
 
 RUN mkdir /data
-
 WORKDIR /data
 
 RUN curl -o /papermc.jar -LO ${PAPER_URL} \
