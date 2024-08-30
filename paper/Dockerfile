@@ -1,7 +1,7 @@
 FROM openjdk:21-slim-bookworm
 
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends curl=7.88.1-10+deb12u6 locales-all=2.36-9+deb12u7 \
+  && apt-get install -y --no-install-recommends curl=7.88.1 locales-all=2.36 \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 ENV LANG ja_JP.UTF-8
