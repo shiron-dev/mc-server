@@ -1,4 +1,4 @@
-FROM openjdk:17-slim-bullseye
+FROM openjdk:17.0.2-slim-bullseye
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends curl=7.88.1-10+deb12u6 locales-all=2.36-9+deb12u7 \
