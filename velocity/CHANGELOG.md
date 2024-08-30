@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/shiron-dev/mc-server/compare/velocity-v1.1.0...velocity-v1.1.1) (2024-08-30)
+
+
+### Bug Fixes
+
+* deps ([#8](https://github.com/shiron-dev/mc-server/issues/8)) ([1014cd0](https://github.com/shiron-dev/mc-server/commit/1014cd0f888dc4cb5f8b6def9e726519af15ce9a))
+
 ## [1.1.0](https://github.com/shiron-dev/mc-server/compare/velocity-v1.0.0...velocity-v1.1.0) (2024-08-30)
 
 
