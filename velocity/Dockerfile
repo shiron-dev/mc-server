@@ -6,11 +6,13 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 ENV LANG ja_JP.UTF-8
 
+ENV VELOCITY_URL="https://api.papermc.io/v2/projects/velocity/versions/3.3.0-SNAPSHOT/builds/416/downloads/velocity-3.3.0-SNAPSHOT-416.jar"
+
 RUN mkdir /velocity
 
 WORKDIR /velocity
 
-RUN curl -o /velocity.jar -LO https://api.papermc.io/v2/projects/velocity/versions/3.3.0-SNAPSHOT/builds/416/downloads/velocity-3.3.0-SNAPSHOT-416.jar \
+RUN curl -o /velocity.jar -LO ${VELOCITY_URL} \
   && chmod +x /velocity.jar
 
 ENTRYPOINT ["java", "-jar", "/velocity.jar"]
