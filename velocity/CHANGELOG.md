@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/shiron-dev/mc-server/compare/velocity-v1.2.0...velocity-v1.2.1) (2024-08-30)
+
+
+### Continuous Integration
+
+* fix releaser ([#16](https://github.com/shiron-dev/mc-server/issues/16)) ([d745240](https://github.com/shiron-dev/mc-server/commit/d745240905c0070936589bb9a2a0aae12ef5c122))
+
 ## [1.2.0](https://github.com/shiron-dev/mc-server/compare/velocity-v1.1.1...velocity-v1.2.0) (2024-08-30)
 
 
