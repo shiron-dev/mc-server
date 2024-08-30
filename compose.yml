@@ -1,0 +1,22 @@
+services:
+  vanilla:
+    build:
+      context: paper
+      dockerfile: Dockerfile
+    environment:
+      JAVA_TOOL_OPTIONS: -Xms1G -Xmx1G 
+    volumes:
+      - ./vanilla_data:/minecraft
+  velocity:
+    build:
+      context: velocity
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    environment:
+      JAVA_TOOL_OPTIONS: -Xms512M -Xmx512M 
+    ports:
+      - "25565:25565"
+      - "19132:19132/udp"
+    volumes:
+      - ./velocity_data:/velocity
