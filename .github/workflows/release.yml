@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
-      release-docker: ${{ steps.release.outputs['docker--release_created'] }}
+      release-paper: ${{ steps.release.outputs['paper--release_created'] }}
+      release-velocity: ${{ steps.release.outputs['velocity--release_created'] }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,7 +27,7 @@ jobs:
     needs: release-please
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    if: needs.release-please.outputs.release-docker
+    if: needs.release-please.outputs.release-paper
     environment: release
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +58,7 @@ jobs:
     needs: release-please
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    if: needs.release-please.outputs.release-docker
+    if: needs.release-please.outputs.release-velocity
     environment: release
     steps:
       - uses: actions/checkout@v4
