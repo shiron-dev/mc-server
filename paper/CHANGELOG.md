@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/shiron-dev/mc-server/compare/paper-v1.2.1...paper-v1.2.2) (2024-08-30)
+
+
+### Bug Fixes
+
+* paper url ([#18](https://github.com/shiron-dev/mc-server/issues/18)) ([a1adafe](https://github.com/shiron-dev/mc-server/commit/a1adafe8d7c7d889544541fb8fd03450a72dfd85))
+
 ## [1.2.1](https://github.com/shiron-dev/mc-server/compare/paper-v1.2.0...paper-v1.2.1) (2024-08-30)
 
 
