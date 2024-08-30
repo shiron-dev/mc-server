@@ -29,6 +29,15 @@ jobs:
     timeout-minutes: 10
     if: needs.release-please.outputs.release-paper
     environment: release
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm/v6
+          - linux/arm/v7
+          - linux/arm64
+          - linux/arm64/v8
     steps:
       - uses: actions/checkout@v4
       - name: Set outputs
@@ -50,6 +59,7 @@ jobs:
         with:
           context: paper
           push: true
+          platforms: ${{ matrix.platform }}
           tags: |
             ghcr.io/${{ github.repository_owner }}/paper:latest
             ghcr.io/${{ github.repository_owner }}/paper:${{ steps.vars.outputs.tag }}
@@ -60,6 +70,15 @@ jobs:
     timeout-minutes: 10
     if: needs.release-please.outputs.release-velocity
     environment: release
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - linux/amd64
+          - linux/arm/v6
+          - linux/arm/v7
+          - linux/arm64
+          - linux/arm64/v8
     steps:
       - uses: actions/checkout@v4
       - name: Set outputs
@@ -81,6 +100,7 @@ jobs:
         with:
           context: velocity
           push: true
+          platforms: ${{ matrix.platform }}
           tags: |
             ghcr.io/${{ github.repository_owner }}/velocity:latest
             ghcr.io/${{ github.repository_owner }}/velocity:${{ steps.vars.outputs.tag }}

@@ -8,9 +8,9 @@ ENV LANG ja_JP.UTF-8
 
 ENV VELOCITY_URL="https://api.papermc.io/v2/projects/velocity/versions/3.3.0-SNAPSHOT/builds/416/downloads/velocity-3.3.0-SNAPSHOT-416.jar"
 
-RUN mkdir /velocity
+RUN mkdir /data
 
-WORKDIR /velocity
+WORKDIR /data
 
 RUN curl -o /velocity.jar -LO ${VELOCITY_URL} \
   && chmod +x /velocity.jar
