@@ -1,4 +1,30 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>shiron-dev/renovate-config"]
+  "extends": [
+    "github>shiron-dev/renovate-config"
+  ],
+  "customDatasources": {
+    "papermc": {
+      "defaultRegistryUrlTemplate": "http://api.papermc.io/v2/projects/paper/versions/{{packageName}}",
+      "format": "json",
+      "transformTemplates": [
+        "{\"releases\": builds.$.{\"version\":$}}"
+      ]
+    }
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "depNameTemplate": "1.21.1",
+      "fileMatch": [
+        "(^|/|\\.)Dockerfile$",
+        "(^|/)Dockerfile\\.[^/]*$"
+      ],
+      "matchStrings": [
+        "ENV PAPER_VERSION (?<depName>.+?)\\s*.*?ENV PAPER_BUILD (?<currentValue>.+?)\\s"
+      ],
+      "datasourceTemplate": "custom.papermc",
+      "versioningTemplate": "docker"
+    }
+  ]
 }
