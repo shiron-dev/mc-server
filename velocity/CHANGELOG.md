@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/shiron-dev/mc-server/compare/velocity-v1.2.2...velocity-v1.2.3) (2024-12-04)
+
+
+### Bug Fixes
+
+* apt versions ([#27](https://github.com/shiron-dev/mc-server/issues/27)) ([43c88e2](https://github.com/shiron-dev/mc-server/commit/43c88e2ca74fa5d7109ff73ef98428d5719bddcd))
+
 ## [1.2.2](https://github.com/shiron-dev/mc-server/compare/velocity-v1.2.1...velocity-v1.2.2) (2024-12-04)
 
 
