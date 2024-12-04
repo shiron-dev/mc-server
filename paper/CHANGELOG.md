@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/shiron-dev/mc-server/compare/paper-v1.2.2...paper-v1.2.3) (2024-12-04)
+
+
+### Bug Fixes
+
+* bump version ([#25](https://github.com/shiron-dev/mc-server/issues/25)) ([907d096](https://github.com/shiron-dev/mc-server/commit/907d096fcc68a8ad98a2999554cd0ee8a50afd29))
+
 ## [1.2.2](https://github.com/shiron-dev/mc-server/compare/paper-v1.2.1...paper-v1.2.2) (2024-08-30)
 
 
