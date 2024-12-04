@@ -6,10 +6,10 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 ENV LANG ja_JP.UTF-8
 
-ENV PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/81/downloads/paper-1.21.3-81.jar"
-
 RUN mkdir /data
 WORKDIR /data
+
+ENV PAPER_URL="https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/81/downloads/paper-1.21.3-81.jar"
 
 RUN curl -o /papermc.jar -LO ${PAPER_URL} \
   && chmod +x /papermc.jar
