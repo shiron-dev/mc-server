@@ -1,4 +1,4 @@
-FROM openjdk:21-slim-bookworm
+FROM openjdk:21-slim-bookworm@sha256:7072053847a8a05d7f3a14ebc778a90b38c50ce7e8f199382128a53385160688
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends curl=7.88.1-10+deb12u8 locales-all=2.36-9+deb12u9 \
